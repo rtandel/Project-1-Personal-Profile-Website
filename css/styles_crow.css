@@ -1,0 +1,252 @@
+/***********************
+ Base Styles
+*********************/
+
+body {
+	display: flex;
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: #e3f7f8;
+	min-height: 100vh;
+	-webkit-perspective: 800px;
+}
+
+/***********************
+ Header Styles
+*********************/
+.main-header,
+.main-nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+} 
+.main-header h1 {
+	margin: 0;
+	
+}
+
+.main-header {
+	justify-content: space-between;
+	background-image: url("../img/snow-jan-2016b.png");
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+/***********************
+ Navigation Base styles
+*********************/
+
+.main-nav a,
+.site-logo a {
+	opacity: 1;
+	
+}
+ 
+.site-logo {
+	text-align: center;
+	margin: 10px;
+}
+ 
+
+ 
+.main-nav a {
+	background-color: lightblue;
+	padding: 10px 15px; 
+	display: block;
+	margin: .75em auto;
+	width: 90%;
+	font-size: .95em;
+	text-decoration: none;
+	color: black;
+	transition-property: background-color;
+	transition-duration: .5s;
+	
+}
+
+.main-nav a p {
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav a:hover,
+.main-nav .active	{
+	background-color: darkblue;
+	color: white;
+	transition-duration: 1s;
+}
+
+.main-nav a:active {
+	-webkit-transform: translateZ(-.3em);
+}
+
+
+
+
+
+/***********************
+ Main Content - Home Page
+*********************/
+
+.columns-container,
+.col,
+.col ul {
+	display: flex;
+}
+
+.columns-container {
+	margin-top: 10px;
+	margin: 0 auto;
+	background-color: white;
+	flex-direction: column;
+	flex: 1;
+}
+
+.col {
+	flex-direction: column;
+	height: 50vh;
+	padding: 10px 10px;
+	margin: 10px;
+	background-color: #dfe3fb;
+	text-align: center;
+}
+
+.col ul {
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1;
+}
+
+.col a {
+	text-decoration: none;
+	background-color: #3366ff;
+	color: white;
+	padding: 10px 15px; 
+	display: block;
+	transition-property: background;
+	transition-duration: 1s;
+}
+
+.col a:hover {
+	transition-duration: 1s;
+	background-color: white;
+	color: black;
+	
+}
+
+/***********************
+ Footer 
+*********************/
+footer {
+	background-color: grey;
+	text-align: center;
+}
+
+.professor-info ul {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	
+	
+}
+
+/***********************
+ Media Queries for Larger Screens
+*********************/
+
+@media (min-width: 769px) and (max-width: 1167px) {
+	.main-header {
+		flex-direction: column;
+	}
+	.main-nav {
+		flex-direction: row;
+		flex-wrap: wrap;
+
+	}
+	
+	.main-nav a {
+		width: auto;
+		display: block;
+		margin: .65em;
+	}
+	
+	/***********************
+	 Main Content - Home Page
+	*********************/
+	
+	.columns-container {
+		flex-direction: row;
+		height: 50%;
+		margin: 5% auto;
+	}
+	
+	/***********************
+	Footer 
+	*********************/
+
+	.professor-info ul {
+		width: 25%;
+	}
+	
+	
+}
+
+@media (min-width: 1168px) {
+	
+	/***********************
+	 Header Styles
+	*********************/
+	.main-header,
+	.main-nav	{
+		flex-direction: row;
+		
+	} 
+
+	.main-header {
+		justify-content: space-between;
+		background-image: url("../img/snow-jan-2016b.png");
+		background-repeat: no-repeat;
+		background-color: white;
+		height: 200px;
+	}
+	
+	/***********************
+	 Navigation Base styles
+	*********************/
+	 
+	.site-logo {
+		text-align: center;
+		margin: 10px;
+	}
+	 
+	.main-nav a {
+		display: block;
+		margin: .75em;
+		width: auto;
+	}
+	
+	.main-nav a:hover,
+	.main-nav .active	{
+		background-color: darkblue;
+		color: white;
+	}
+	
+	/***********************
+	 Main Content - Home Page
+	*********************/
+	
+	.columns-container {
+		flex-direction: row;
+		margin: 2% auto;
+	}
+
+	
+}
+
+
+@keyframes calc-appear {
+	50%  { display: inline; opacity: .5; }
+	100% { display: inline; opacity: 1;}
+}
